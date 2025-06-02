@@ -403,9 +403,9 @@
               "name": "t:names.payment_icons",
               "settings": {
                 "horizontal_alignment": "flex-start",
-                "gap": 10,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
+                "gap": 5,
+                "padding-block-start": 10,
+                "padding-block-end": 10,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
