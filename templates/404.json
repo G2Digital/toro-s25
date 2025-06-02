@@ -68,8 +68,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
-            "link": "shopify://collections/all",
+            "label": "Voltar para a loja",
+            "link": "https://www.toroclothing.com.br/",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
