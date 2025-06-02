@@ -40,7 +40,7 @@
         href="{{ link.url }}"
         class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
       >
-        <span class="menu-list__link-title {% if link.links != blank %}megamenu{% endif %}">
+        <span class="menu-list__link-title item-{{ forloop.index }}{% if link.links != blank %} megamenu{% endif %}">
           {{- link.title -}}
           {%- if link.links != blank -%}
             <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">

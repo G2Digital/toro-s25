@@ -3936,6 +3936,11 @@ text-component {
   box-shadow: none;
 }
 
+.item-1{
+  font-weight:600;
+  color:rgb(255, 74, 74);
+}
+
 .menu-list__link-title.megamenu{
   display:flex;
   align-items:center;
