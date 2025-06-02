@@ -31,11 +31,11 @@
 
 {% if section.settings.slide_height == 'custom_height' %}
   {% style %}
-    slideshow-slides{
+    .slideshow--single-media slideshow-slides{
       min-height: {{ section.settings.custom_height_desktop }}px;
     }
     @media screen and (max-width: 749px) {
-     slideshow-slides {
+     .slideshow--single-media slideshow-slides {
         min-height: {{ section.settings.custom_height_mobile }}px;
       }
     }
