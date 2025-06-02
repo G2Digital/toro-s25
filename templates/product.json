@@ -247,7 +247,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "heading": "Informações do produto",
-                    "open_by_default": true
+                    "open_by_default": false
                   },
                   "blocks": {
                     "text_fPAWt7": {
