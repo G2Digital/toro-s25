@@ -180,6 +180,18 @@
             "email_signup_NcLwNb"
           ]
         },
+        "divider_ajQdnm": {
+          "type": "_divider",
+          "name": "t:names.divider",
+          "settings": {
+            "thickness": 1,
+            "corner_radius": "square",
+            "width_percent": 100,
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
+          "blocks": {}
+        },
         "group_PHUen6": {
           "type": "group",
           "name": "t:names.group",
@@ -504,6 +516,7 @@
       },
       "block_order": [
         "group_tbFfTQ",
+        "divider_ajQdnm",
         "group_PHUen6",
         "group_qaqBdE",
         "footer_utilities_KRaGcH"
