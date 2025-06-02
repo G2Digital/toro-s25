@@ -121,7 +121,11 @@
         "color_scheme": "scheme-2",
         "padding-block-start": 24,
         "padding-block-end": 24,
+<<<<<<< HEAD
         "gap_between_elements": 24
+=======
+        "gap_between_elements": 75
+>>>>>>> 93e02f3320669090111e6190f98cd31e45d8f4e2
       }
     },
     "product_list_V4VhVQ": {
