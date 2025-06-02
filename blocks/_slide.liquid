@@ -1,5 +1,3 @@
-
-
 {%- assign block_index = section.blocks | find_index: 'id', block.id -%}
 
 {% stylesheet %}
@@ -37,11 +35,32 @@
     object-fit: cover;
     object-position: center center;
   }
+
+  /* Estilos para imagem desktop/mobile */
+  .slide__image--desktop {
+    display: block;
+  }
+
+  .slide__image--mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .slide__image--desktop {
+      display: none;
+    }
+
+    .slide__image--mobile {
+      display: block;
+    }
+  }
 {% endstylesheet %}
 
 {% capture children %}
   {% liquid
     assign preview_image = block.settings.image_1
+    assign preview_image_mobile = block.settings.image_1_mobile
+    
     if block.settings.media_type_1 == 'video'
       assign preview_image = block.settings.video_1.preview_image
     endif
@@ -56,6 +75,15 @@
       .shopify-section-{{ section.id }} slideshow-slide {
         min-height: {{ 1 | divided_by: preview_image.aspect_ratio | times: 100 }}vw;
       }
+      
+      @media screen and (max-width: 749px) {
+        {% if preview_image_mobile != blank %}
+          .shopify-section-{{ section.id }} slideshow-slides,
+          .shopify-section-{{ section.id }} slideshow-slide {
+            min-height: {{ 1 | divided_by: preview_image_mobile.aspect_ratio | times: 100 }}vw;
+          }
+        {% endif %}
+      }
     {% endstyle %}
   {% endif %}
 
@@ -63,42 +91,90 @@
     {%- if block.settings.toggle_overlay -%}
       {% render 'overlay', settings: block.settings %}
     {%- endif -%}
-    {%- if preview_image -%}
-      {%- liquid
-        assign height = preview_image.width | divided_by: preview_image.aspect_ratio | round
-        assign media_width_desktop = '100vw'
-        assign media_width_mobile = '100vw'
-        assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
-        assign lazy_sizes = 'auto, ' | append: sizes
-        assign widths = '300, 525, 750, 900, 1024, 1280, 1440, 1700, 1920, 2048, 2304, 2560, 2880, 3072, 3840'
-      %}
+    
+    {%- if block.settings.media_type_1 == 'image' -%}
+      {%- if preview_image -%}
+        {%- liquid
+          assign height_desktop = preview_image.width | divided_by: preview_image.aspect_ratio | round
+          assign media_width_desktop = '100vw'
+          assign media_width_mobile = '100vw'
+          assign sizes_desktop = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
+          assign lazy_sizes_desktop = 'auto, ' | append: sizes_desktop
+          assign widths = '300, 525, 750, 900, 1024, 1280, 1440, 1700, 1920, 2048, 2304, 2560, 2880, 3072, 3840'
+        %}
 
-      {%- if block.settings.media_type_1 == 'image' -%}
+        {%- comment -%} Imagem Desktop {%- endcomment -%}
         {%- if block_index == 1 -%}
           {{
-            block.settings.image_1
+            preview_image
             | image_url: width: 3840
-            | image_tag: height: height, sizes: sizes, widths: widths, loading: 'eager', class: 'slide__image'
+            | image_tag: height: height_desktop, sizes: sizes_desktop, widths: widths, loading: 'eager', class: 'slide__image slide__image--desktop'
           }}
         {%- else -%}
           {{
-            block.settings.image_1
+            preview_image
             | image_url: width: 3840
-            | image_tag: height: height, widths: widths, loading: 'lazy', class: 'slide__image', sizes: lazy_sizes
+            | image_tag: height: height_desktop, widths: widths, loading: 'lazy', class: 'slide__image slide__image--desktop', sizes: lazy_sizes_desktop
           }}
         {%- endif -%}
-      {%- else -%}
-        {{
-          block.settings.video_1
-          | video_tag: image_size: '3840x', autoplay: true, loop: true, controls: false, muted: true, class: 'slide__video'
-        }}
       {%- endif -%}
+
+      {%- comment -%} Imagem Mobile {%- endcomment -%}
+      {%- if preview_image_mobile -%}
+        {%- liquid
+          assign height_mobile = preview_image_mobile.width | divided_by: preview_image_mobile.aspect_ratio | round
+          assign sizes_mobile = '100vw'
+          assign lazy_sizes_mobile = 'auto, ' | append: sizes_mobile
+        %}
+
+        {%- if block_index == 1 -%}
+          {{
+            preview_image_mobile
+            | image_url: width: 750
+            | image_tag: height: height_mobile, sizes: sizes_mobile, widths: '300, 525, 750', loading: 'eager', class: 'slide__image slide__image--mobile'
+          }}
+        {%- else -%}
+          {{
+            preview_image_mobile
+            | image_url: width: 750
+            | image_tag: height: height_mobile, widths: '300, 525, 750', loading: 'lazy', class: 'slide__image slide__image--mobile', sizes: lazy_sizes_mobile
+          }}
+        {%- endif -%}
+      {%- elsif preview_image -%}
+        {%- comment -%} Fallback: usar imagem desktop no mobile se não houver imagem mobile {%- endcomment -%}
+        {%- liquid
+          assign height_fallback = preview_image.width | divided_by: preview_image.aspect_ratio | round
+          assign sizes_fallback = '100vw'
+          assign lazy_sizes_fallback = 'auto, ' | append: sizes_fallback
+        %}
+
+        {%- if block_index == 1 -%}
+          {{
+            preview_image
+            | image_url: width: 750
+            | image_tag: height: height_fallback, sizes: sizes_fallback, widths: '300, 525, 750', loading: 'eager', class: 'slide__image slide__image--mobile'
+          }}
+        {%- else -%}
+          {{
+            preview_image
+            | image_url: width: 750
+            | image_tag: height: height_fallback, widths: '300, 525, 750', loading: 'lazy', class: 'slide__image slide__image--mobile', sizes: lazy_sizes_fallback
+          }}
+        {%- endif -%}
+      {%- endif -%}
+    {%- elsif block.settings.media_type_1 == 'video' -%}
+      {%- comment -%} Vídeo (mantém comportamento original) {%- endcomment -%}
+      {{
+        block.settings.video_1
+        | video_tag: image_size: '3840x', autoplay: true, loop: true, controls: false, muted: true, class: 'slide__video'
+      }}
     {%- else -%}
       <placeholder-image data-block-id="{{ block.id }}" data-type="general"></placeholder-image>
     {%- endif -%}
   </div>
+  
   <div
-    class="spacing-style slide__content{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}{% if preview_image or block.settings.toggle_overlay %} background-transparent{% endif %}"
+    class="spacing-style slide__content{% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}{% if preview_image or preview_image_mobile or block.settings.toggle_overlay %} background-transparent{% endif %}"
     style="{% render 'spacing-style', settings: block.settings %}"
     {{ block.shopify_attributes }}
   >
@@ -159,7 +235,13 @@
     {
       "type": "image_picker",
       "id": "image_1",
-      "label": "t:settings.image",
+      "label": "Imagem Desktop",
+      "visible_if": "{{ block.settings.media_type_1 == 'image' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1_mobile",
+      "label": "Imagem Mobile",
       "visible_if": "{{ block.settings.media_type_1 == 'image' }}"
     },
     {

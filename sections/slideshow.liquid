@@ -1,5 +1,3 @@
-
-
 {% if section.blocks.size > 1 %}
   {% capture controls %}
     {%- render 'slideshow-controls',
@@ -30,6 +28,19 @@
     assign show_arrows = false
   endif
 %}
+
+{% if section.settings.slide_height == 'custom_height' %}
+  {% style %}
+    slideshow-slides{
+      min-height: {{ section.settings.custom_height_desktop }}px;
+    }
+    @media screen and (max-width: 749px) {
+     slideshow-slides {
+        min-height: {{ section.settings.custom_height_mobile }}px;
+      }
+    }
+  {% endstyle %}
+{% endif %}
 
 <div
   class="spacing-style section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} disable-section-top-offset"
@@ -167,10 +178,36 @@
         {
           "value": "large",
           "label": "t:options.large"
+        },
+        {
+          "value": "custom_height",
+          "label": "Personzalizado"
         }
       ],
       "default": "medium",
       "label": "t:settings.height"
+    },
+    {
+      "type": "range",
+      "id": "custom_height_desktop",
+      "label": "Altura Desktop",
+      "min": 200,
+      "max": 850,
+      "step": 10,
+      "unit": "px",
+      "default": 720,
+      "visible_if": "{{ section.settings.slide_height == 'custom_height' }}"
+    },
+    {
+      "type": "range",
+      "id": "custom_height_mobile",
+      "label": "Altura Mobile",
+      "min": 550,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "default": 800,
+      "visible_if": "{{ section.settings.slide_height == 'custom_height' }}"
     },
     {
       "type": "header",
