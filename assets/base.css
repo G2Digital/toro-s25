@@ -3950,3 +3950,12 @@ text-component {
 .announcement-bar__slider slideshow-arrows{
   display: none;
 }
+
+.price__prod{
+  display:flex;
+  flex-direction: column;
+}
+
+.price__prod .installment-price{
+  font-size:12px;
+}

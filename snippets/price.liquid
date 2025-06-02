@@ -36,12 +36,18 @@
   endif
 -%}
 
-<div ref="priceContainer">
+<div class="price__prod" ref="priceContainer">
   {% if show_sale_price_first == false and compare_at_price > price %}
     <s class="compare-at-price">{{ compare_at_price }}</s>
   {% endif %}
 
   <span class="price">{{ price | default: '&nbsp;' }}</span>
+
+  {%- assign installments = 6 -%}
+  {%- assign installment_price = selected_variant.price | divided_by: installments -%}
+  <span class="installment-price">
+    {{ installments }}x {{ installment_price | money }}
+  </span>
 
   {% if show_sale_price_first == true and compare_at_price > price %}
     <s class="compare-at-price">{{ compare_at_price }}</s>
@@ -60,3 +66,4 @@
     {% render 'unit-price', variant: selected_variant, price: unit_price %}
   {%- endif -%}
 </div>
+
