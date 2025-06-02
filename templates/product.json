@@ -224,31 +224,142 @@
               },
               "block_order": []
             },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "Product description",
+            "accordion_7pi7A9": {
+              "type": "accordion",
+              "name": "t:names.accordion",
               "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
+                "icon": "caret",
+                "dividers": true,
+                "type_preset": "h6",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "accordion_row_g4nE6r": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Informações do produto",
+                    "open_by_default": true
+                  },
+                  "blocks": {
+                    "text_fPAWt7": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.description }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_fPAWt7"
+                  ]
+                },
+                "accordion_row_YkqUyd": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Cuidados",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "text_cdqHbf": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Aqui vamos dar uma série de dicas que certamente te ajudarão a manter a qualidade da tua roupa por muitos e muitos anos.</p><p>• Evite alvejante<br/>• Não deixe de molho por longo tempo<br/>• Na lavagem não misture as cores<br/>• Atenção para secar<br/>• Não passe o ferro pelas estampas</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_cdqHbf"
+                  ]
+                },
+                "accordion_row_ME6i9N": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Trocas e Devoluções",
+                    "open_by_default": false
+                  },
+                  "blocks": {
+                    "text_N6Et6M": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>As ocorrências que envolvem <strong>devolução</strong> ou <strong>troca</strong> devem SEMPRE ser comunicadas ao nosso SAC pelo e-mail: <strong>operacional@toroclothing.com.br</strong></p><p>Através deste painel será disponibilizado um formulário para preenchimento dos itens a serem devolvidos. </p><p>Se uma das hipóteses citadas abaixo ocorrer, entre em contato com nosso SAC TORO CLOTHING em até 7 dias após o recebimento:</p><ul><li>Desistência da compra (arrependimento);</li><li>Embalagem aberta ou avariada;</li><li>Produto avariado;</li><li>Produto em desacordo com o pedido;</li><li>Falta de acessórios.</li></ul>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_N6Et6M"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_row_g4nE6r",
+                "accordion_row_YkqUyd",
+                "accordion_row_ME6i9N"
+              ]
             }
           },
           "block_order": [
@@ -256,7 +367,7 @@
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "accordion_7pi7A9"
           ]
         }
       },
