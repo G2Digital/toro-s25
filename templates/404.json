@@ -109,7 +109,7 @@
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
             "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "fill",
@@ -133,26 +133,11 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "collection_link_button_8HqHdD": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
-              "settings": {
-                "label": "View all",
-                "collection": "{{ closest.collection }}",
-                "open_in_new_tab": false,
-                "style_class": "button-secondary",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "custom",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
             "text_WJEa9Q": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Discover something new</p>",
+                "text": "<p>Descubra algo novo</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -176,7 +161,6 @@
             }
           },
           "block_order": [
-            "collection_link_button_8HqHdD",
             "text_WJEa9Q"
           ]
         },
