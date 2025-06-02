@@ -20,7 +20,7 @@
             "text": "ATÉ 6X S/JUROS NO CARTÃO DE CRÉDITO",
             "link": "",
             "font": "var(--font-body--family)",
-            "font_size": "0.75rem",
+            "font_size": "0.625rem",
             "weight": "",
             "letter_spacing": "normal",
             "case": "none"
@@ -34,7 +34,7 @@
             "text": "FRETE GRÁTIS  NAS COMPRAS ACIMA DE R$499,00",
             "link": "",
             "font": "var(--font-body--family)",
-            "font_size": "0.75rem",
+            "font_size": "0.625rem",
             "weight": "",
             "letter_spacing": "normal",
             "case": "none"
@@ -48,7 +48,7 @@
             "text": "5% DE DESCONTO VIA PIX",
             "link": "",
             "font": "var(--font-body--family)",
-            "font_size": "0.75rem",
+            "font_size": "0.625rem",
             "weight": "",
             "letter_spacing": "normal",
             "case": "none"
