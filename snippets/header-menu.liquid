@@ -40,7 +40,14 @@
         href="{{ link.url }}"
         class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
       >
-        <span class="menu-list__link-title">{{- link.title -}}</span>
+        <span class="menu-list__link-title {% if link.links != blank %}megamenu{% endif %}">
+          {{- link.title -}}
+          {%- if link.links != blank -%}
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.75 1.5L3.75 4.5L0.75 1.5" stroke="CurrentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          {%- endif -%}
+        </span>
       </a>
       {%- if link.links != blank -%}
         <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">

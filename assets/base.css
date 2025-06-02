@@ -3935,3 +3935,9 @@ text-component {
   transform: none;
   box-shadow: none;
 }
+
+.menu-list__link-title.megamenu{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}

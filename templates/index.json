@@ -17,6 +17,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/toro-clothing-valentine_s_day_site_banner.png",
+            "image_1_mobile": "shopify://shop_images/toro-clothing-valentine_s_day_site_banner-mobile.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -50,7 +51,9 @@
         "autoplay": false,
         "autoplay_speed": 4,
         "section_width": "full-width",
-        "slide_height": "medium",
+        "slide_height": "custom_height",
+        "custom_height_desktop": 720,
+        "custom_height_mobile": 550,
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -109,11 +112,38 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_BnCrtB": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>5% DE DESCONTO VIA PIX</strong></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_tBH3Uy",
-        "text_trCPkj"
+        "text_trCPkj",
+        "text_BnCrtB"
       ],
       "name": "t:names.marquee_section",
       "settings": {
@@ -121,11 +151,7 @@
         "color_scheme": "scheme-2",
         "padding-block-start": 24,
         "padding-block-end": 24,
-<<<<<<< HEAD
-        "gap_between_elements": 24
-=======
-        "gap_between_elements": 75
->>>>>>> 93e02f3320669090111e6190f98cd31e45d8f4e2
+        "gap_between_elements": 80
       }
     },
     "product_list_V4VhVQ": {
