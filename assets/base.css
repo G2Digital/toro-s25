@@ -3941,3 +3941,7 @@ text-component {
   align-items:center;
   gap:8px;
 }
+
+.announcement-bar__slider slideshow-arrows{
+  display: none;
+}
