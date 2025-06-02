@@ -93,7 +93,7 @@
           "static": true,
           "settings": {
             "menu": "menu-principal-s24",
-            "menu_style": "featured_products",
+            "menu_style": "collection_images",
             "featured_products_aspect_ratio": "adapt",
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
