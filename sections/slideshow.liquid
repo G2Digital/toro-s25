@@ -31,12 +31,17 @@
 
 {% if section.settings.slide_height == 'custom_height' %}
   {% style %}
-    .slideshow--single-media slideshow-slides{
-      min-height: {{ section.settings.custom_height_desktop }}px;
+    .slideshow--single-media slideshow-slides {
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      object-fit: cover;
     }
+
     @media screen and (max-width: 749px) {
-     .slideshow--single-media slideshow-slides {
-        min-height: {{ section.settings.custom_height_mobile }}px;
+      .slideshow--single-media slideshow-slides {
+        width: 100%;
+        aspect-ratio: 1.1 / 1;
+        object-fit: cover;
       }
     }
   {% endstyle %}
@@ -181,7 +186,7 @@
         },
         {
           "value": "custom_height",
-          "label": "Personzalizado"
+          "label": "Personalizado"
         }
       ],
       "default": "medium",
