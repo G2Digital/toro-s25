@@ -458,7 +458,6 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
-              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {
@@ -466,7 +465,7 @@
                   "type": "_social-link",
                   "name": "Facebook",
                   "settings": {
-                    "link": "https://www.facebook.com/shopify"
+                    "link": "https://www.facebook.com/toroclo"
                   },
                   "blocks": {}
                 },
@@ -474,23 +473,7 @@
                   "type": "_social-link",
                   "name": "Instagram ",
                   "settings": {
-                    "link": "https://www.instagram.com/shopify/#"
-                  },
-                  "blocks": {}
-                },
-                "social_link_kd8UUt": {
-                  "type": "_social-link",
-                  "name": "TikTok",
-                  "settings": {
-                    "link": "https://www.tiktok.com/@shopify"
-                  },
-                  "blocks": {}
-                },
-                "social_link_Qw9AXL": {
-                  "type": "_social-link",
-                  "name": "X / Twitter",
-                  "settings": {
-                    "link": "https://x.com/shopify"
+                    "link": "https://www.instagram.com/toroclothing/"
                   },
                   "blocks": {}
                 },
@@ -498,7 +481,7 @@
                   "type": "_social-link",
                   "name": "YouTube",
                   "settings": {
-                    "link": "https://www.youtube.com/shopify"
+                    "link": "https://www.youtube.com/channel/UCppuVh1IJITsM9tO9dYEdGg?sub_confirmation=1"
                   },
                   "blocks": {}
                 }
@@ -506,8 +489,6 @@
               "block_order": [
                 "social_link_JnLXB6",
                 "social_link_9i9EqD",
-                "social_link_kd8UUt",
-                "social_link_Qw9AXL",
                 "social_link_aAH768"
               ]
             }
