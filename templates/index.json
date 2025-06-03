@@ -18,6 +18,7 @@
             "media_type_1": "image",
             "image_1": "shopify://shop_images/valentine_s_day_1920_x_600_px.png",
             "image_1_mobile": "shopify://shop_images/mobile_1080x980_fc6af08e-70f5-47f6-b37a-bce938ef2b61.png",
+            "link_slide": "shopify://collections/valentines",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
