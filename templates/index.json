@@ -52,7 +52,7 @@
         "autoplay_speed": 4,
         "section_width": "full-width",
         "slide_height": "custom_height",
-        "custom_height_desktop": 720,
+        "custom_height_desktop": 600,
         "custom_height_mobile": 550,
         "padding-block-start": 0,
         "padding-block-end": 0
