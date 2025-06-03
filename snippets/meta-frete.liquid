@@ -1,0 +1,68 @@
+<script
+  src="{{ 'meta-frete.js' | asset_url }}"
+  type="module"
+></script>
+
+
+<style>
+    .free-shipping-bar {
+        max-width: 600px;
+        padding: 15px 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        border-bottom: 1px solid rgba(0 0 0 / 0.06);
+    }
+
+    .free-shipping-message {
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    .free-shipping-success {
+        color:rgb(0, 0, 0);
+        display: inline-block;
+    }
+
+    .progress-bar-container {
+        height: 10px;
+        overflow: hidden;
+        position: relative;
+        background:rgba(0 0 0 / 0.06);
+    }
+
+    .progress-bar {
+        background: linear-gradient(90deg,rgb(0, 0, 0),rgb(41, 41, 41));
+        height: 100%;
+        transition: width 0.5s ease-in-out;
+    }
+</style>
+
+{% assign free_shipping_threshold = 499 %}
+{% assign threshold_in_cents = free_shipping_threshold | times: 100 %}
+{% assign cart_total = cart.total_price %}
+{% assign progress_percentage = cart_total | times: 100 | divided_by: threshold_in_cents %}
+{% if progress_percentage > 100 %}
+  {% assign progress_percentage = 100 %}
+{% endif %}
+{% assign remaining_amount = threshold_in_cents | minus: cart_total %}
+{% if remaining_amount < 0 %}
+  {% assign remaining_amount = 0 %}
+{% endif %}
+
+<div class="free-shipping-bar">
+  <div class="free-shipping-message">
+    {% if cart_total >= threshold_in_cents %}
+      <span class="free-shipping-success">🎉 Parabéns! Você ganhou frete grátis!</span>
+    {% else %}
+      <span class="free-shipping-progress">
+        Faltam {{ remaining_amount | money }} para o frete grátis!
+      </span>
+    {% endif %}
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" style="width: {{ progress_percentage }}%;" data-progress="{{ progress_percentage }}"></div>
+  </div>
+</div>
