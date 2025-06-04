@@ -3960,6 +3960,24 @@ text-component {
   font-size:12px;
 }
 
+.discount__coupon{
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 5px;
+  font-size:10px !important;
+  color: rgb(88, 88, 88);
+  background-color: rgb(from var(--color-foreground) r g b / 5%);
+}
+
+.discount__coupon svg{
+  width:20px;
+  margin:2px 0 0 0;
+  fill: rgb(88, 88, 88);
+  transform: rotate(-20deg);
+}
+
 .g2digital{
   width:70px;
 }
