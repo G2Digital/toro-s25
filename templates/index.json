@@ -39,12 +39,40 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "slide_DUmyE9": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/banner_dia_13_jun.png",
+            "image_1_mobile": "shopify://shop_images/banner_dia_13_jun_mobile.png",
+            "link_slide": "shopify://collections/valentines",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "slide_P9jc4T"
+        "slide_P9jc4T",
+        "slide_DUmyE9"
       ],
-      "name": "t:names.slideshow",
       "settings": {
         "icons_style": "arrows_large",
         "slideshow_controls_style": "dots",
@@ -64,7 +92,6 @@
       "blocks": {
         "text_tBH3Uy": {
           "type": "text",
-          "name": "t:names.text",
           "settings": {
             "text": "<p><strong>ATÉ 6X S/JUROS NO CARTÃO DE CRÉDITO</strong></p>",
             "width": "fit-content",
@@ -90,7 +117,6 @@
         },
         "text_trCPkj": {
           "type": "text",
-          "name": "t:names.text",
           "settings": {
             "text": "<p><strong>FRETE GRÁTIS NAS COMPRAS ACIMA DE R$499</strong></p>",
             "width": "fit-content",
@@ -116,7 +142,6 @@
         },
         "text_BnCrtB": {
           "type": "text",
-          "name": "t:names.text",
           "settings": {
             "text": "<p><strong>5% DE DESCONTO VIA PIX</strong></p>",
             "width": "fit-content",
@@ -146,7 +171,6 @@
         "text_trCPkj",
         "text_BnCrtB"
       ],
-      "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
         "color_scheme": "scheme-2",
@@ -160,7 +184,6 @@
       "blocks": {
         "static-header": {
           "type": "_product-list-content",
-          "name": "t:names.header",
           "static": true,
           "settings": {
             "content_direction": "row",
@@ -194,7 +217,6 @@
           "blocks": {
             "product_list_text_w8gXRT": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
               "settings": {
                 "text": "<h3>{{ closest.collection.title }}</h3>",
                 "width": "fit-content",
@@ -220,7 +242,6 @@
             },
             "product_list_button_6Xmw6x": {
               "type": "_product-list-button",
-              "name": "t:names.product_list_button",
               "settings": {
                 "label": "Ver todos",
                 "collection": "{{ closest.collection }}",
@@ -241,7 +262,6 @@
         },
         "static-product-card": {
           "type": "product-card",
-          "name": "t:names.product_card",
           "static": true,
           "settings": {
             "product": "{{ closest.product }}",
@@ -260,7 +280,6 @@
           "blocks": {
             "product_card_gallery_KfWb9X": {
               "type": "_product-card-gallery",
-              "name": "t:names.product_image",
               "settings": {
                 "product": "{{ closest.product }}",
                 "image_ratio": "portrait",
@@ -277,7 +296,6 @@
             },
             "group_fUiy7G": {
               "type": "group",
-              "name": "t:names.group",
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -316,7 +334,6 @@
               "blocks": {
                 "product_title_z3nx69": {
                   "type": "product-title",
-                  "name": "t:names.product_title",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "width": "100%",
@@ -342,7 +359,6 @@
                 },
                 "price_CNK6yp": {
                   "type": "price",
-                  "name": "t:names.product_price",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "show_sale_price_first": true,
@@ -366,7 +382,6 @@
                 },
                 "swatches_XA6H8h": {
                   "type": "swatches",
-                  "name": "t:names.swatches",
                   "settings": {
                     "product": "{{ closest.product }}",
                     "product_swatches_alignment": "flex-start",
@@ -393,7 +408,6 @@
           ]
         }
       },
-      "name": "t:names.products_carousel",
       "settings": {
         "collection": "lancamentos",
         "layout_type": "carousel",
@@ -418,7 +432,6 @@
       "blocks": {
         "video_xqcAim": {
           "type": "video",
-          "name": "t:names.video",
           "settings": {
             "source": "uploaded",
             "video": "shopify://files/videos/video-timeline-toro.mp4",
@@ -444,7 +457,6 @@
       "block_order": [
         "video_xqcAim"
       ],
-      "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
