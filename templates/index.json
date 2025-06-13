@@ -42,6 +42,7 @@
         },
         "slide_P9jc4T": {
           "type": "_slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/valentine_s_day_1920_x_600_px.png",
