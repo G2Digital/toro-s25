@@ -43,15 +43,15 @@
 
   <span class="price">{{ price | default: '&nbsp;' }}</span>
 
+  {% if show_sale_price_first == true %}
+    <s class="compare-at-price">{{ compare_at_price }}</s>
+  {% endif %}
+
   {%- assign installments = 6 -%}
   {%- assign installment_price = selected_variant.price | divided_by: installments -%}
   <span class="installment-price">
     {{ installments }}x {{ installment_price | money }}
   </span>
-
-  {% if show_sale_price_first == true and compare_at_price > price %}
-    <s class="compare-at-price">{{ compare_at_price }}</s>
-  {% endif %}
 
   {%- if selected_variant.unit_price and show_unit_price %}
     {%- liquid
