@@ -104,8 +104,9 @@
   data-product-transition="{{ settings.transition_to_main_product }}"
   {{ block.shopify_attributes }}
 >
+      {% comment %} id="{{ product_card_id | md5 }}" {% endcomment %}
   <a
-    id="{{ product_card_id | md5 }}"
+
     {% unless onboarding %}
       href="{{ product.selected_or_first_available_variant.url }}"
       on:click="/navigateToProduct"
