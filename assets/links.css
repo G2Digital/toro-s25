@@ -1,0 +1,48 @@
+.container {
+    max-width:800px;
+    margin:0 auto;
+    padding:20px;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.linksList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.linksList li {
+    margin-bottom:15px;
+}
+
+.linksList li a {
+    display:block;
+    padding:15px;
+    background: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border:2px solid #000000;
+    transition: background-color 0.3s ease;
+}
+
+.linksList li a:hover {
+    color:#000000;
+    background:transparent;
+    border:2px solid #000000;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer strong {
+    color: #000;
+}
