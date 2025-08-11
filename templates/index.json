@@ -43,6 +43,7 @@
         },
         "slide_q3grBh": {
           "type": "_slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/banner_site_camisetas.png",
