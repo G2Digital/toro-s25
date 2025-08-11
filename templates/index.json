@@ -43,12 +43,11 @@
         },
         "slide_q3grBh": {
           "type": "_slide",
-          "disabled": true,
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/banner_dia_13_jun.png",
-            "image_1_mobile": "shopify://shop_images/banner_dia_13_jun_mobile.png",
-            "link_slide": "shopify://collections/outlet",
+            "image_1": "shopify://shop_images/banner_site_camisetas.png",
+            "image_1_mobile": "shopify://shop_images/banner_mobile_camisetas.png",
+            "link_slide": "shopify://collections/kit",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
