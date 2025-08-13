@@ -191,13 +191,39 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_wxjRf9": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>FRETE FIXO RS, PR E SUDESTE - R$20,00</strong></p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_tBH3Uy",
         "text_trCPkj",
         "text_BnCrtB",
-        "text_KfcKcb"
+        "text_KfcKcb",
+        "text_wxjRf9"
       ],
       "settings": {
         "movement_direction": "normal",
