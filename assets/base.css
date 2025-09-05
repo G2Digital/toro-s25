@@ -24,7 +24,8 @@ body {
 html {
   /* Firefox */
   scrollbar-width: thin;
-  scrollbar-color: rgb(from var(--color-foreground) r g b / 40%) var(--color-background);
+  scrollbar-color: rgb(from var(--color-foreground) r g b / 40%)
+    var(--color-background);
   scroll-behavior: smooth;
 }
 
@@ -69,8 +70,8 @@ select {
 .predictive-search-results__card--product,
 .predictive-search-results__card {
   position: relative;
-  transition:
-    transform var(--hover-transition-duration) var(--hover-transition-timing),
+  transition: transform var(--hover-transition-duration)
+      var(--hover-transition-timing),
     box-shadow var(--hover-transition-duration) var(--hover-transition-timing);
   will-change: transform, box-shadow;
   z-index: var(--layer-flat);
@@ -121,7 +122,8 @@ select {
   .card-hover-effect-subtle-zoom .product-card__image,
   .card-hover-effect-subtle-zoom .resource-card__image {
     overflow: hidden;
-    transition: transform var(--hover-transition-duration) var(--hover-transition-timing);
+    transition: transform var(--hover-transition-duration)
+      var(--hover-transition-timing);
   }
 
   .predictive-search-results__card .card-gallery,
@@ -140,13 +142,34 @@ select {
   }
 
   .card-hover-effect-subtle-zoom .header .product-card:hover .card-gallery,
-  .card-hover-effect-subtle-zoom .header .collection-card:hover .collection-card__image,
-  .card-hover-effect-subtle-zoom .header .product-card:hover .product-card__image,
-  .card-hover-effect-subtle-zoom .header .resource-card:hover .resource-card__image,
-  .card-hover-effect-subtle-zoom .header-drawer .product-card:hover .card-gallery,
-  .card-hover-effect-subtle-zoom .header-drawer .collection-card:hover .collection-card__image,
-  .card-hover-effect-subtle-zoom .header-drawer .product-card:hover .product-card__image,
-  .card-hover-effect-subtle-zoom .header-drawer .resource-card:hover .resource-card__image {
+  .card-hover-effect-subtle-zoom
+    .header
+    .collection-card:hover
+    .collection-card__image,
+  .card-hover-effect-subtle-zoom
+    .header
+    .product-card:hover
+    .product-card__image,
+  .card-hover-effect-subtle-zoom
+    .header
+    .resource-card:hover
+    .resource-card__image,
+  .card-hover-effect-subtle-zoom
+    .header-drawer
+    .product-card:hover
+    .card-gallery,
+  .card-hover-effect-subtle-zoom
+    .header-drawer
+    .collection-card:hover
+    .collection-card__image,
+  .card-hover-effect-subtle-zoom
+    .header-drawer
+    .product-card:hover
+    .product-card__image,
+  .card-hover-effect-subtle-zoom
+    .header-drawer
+    .resource-card:hover
+    .resource-card__image {
     transform: none;
   }
 
@@ -214,11 +237,13 @@ p:empty {
     pointer-events: none;
   }
 
-  html:active-view-transition-type(page-navigation) main[data-page-transition-enabled='true'] {
+  html:active-view-transition-type(page-navigation)
+    main[data-page-transition-enabled="true"] {
     view-transition-name: main-content;
   }
 
-  html:active-view-transition-type(page-navigation) main[data-product-transition='true'][data-template*='product'] {
+  html:active-view-transition-type(page-navigation)
+    main[data-product-transition="true"][data-template*="product"] {
     view-transition-name: none;
   }
 
@@ -231,11 +256,11 @@ p:empty {
   }
 
   html:active-view-transition-type(product-image-transition) {
-    [data-view-transition-type='product-image-transition'] {
+    [data-view-transition-type="product-image-transition"] {
       view-transition-name: product-image-transition;
     }
 
-    [data-view-transition-type='product-details'] {
+    [data-view-transition-type="product-details"] {
       view-transition-name: product-details;
     }
   }
@@ -336,18 +361,28 @@ p:empty {
     calc(100% - var(--page-margin) * 2)
   );
   --full-page-grid-margin: minmax(var(--page-margin), 1fr);
-  --full-page-grid-with-margins: var(--full-page-grid-margin) var(--full-page-grid-central-column-width)
-    var(--full-page-grid-margin);
+  --full-page-grid-with-margins: var(--full-page-grid-margin)
+    var(--full-page-grid-central-column-width) var(--full-page-grid-margin);
 
   /* Utility variable gives the grid's first column width. Provides an offset width for components like carousels */
   --util-page-margin-offset: max(
     var(--page-margin),
-    calc((100% - min(var(--page-content-width), calc(100% - (var(--page-margin) * 2)))) / 2)
+    calc(
+      (
+          100% -
+            min(
+              var(--page-content-width),
+              calc(100% - (var(--page-margin) * 2))
+            )
+        ) / 2
+    )
   );
 
   /* Offset for full-width sections to account for the page margin,
   used for Marquee — note that --util-page-margin-offset doesn't work here */
-  --full-page-margin-inline-offset: calc(((100vw - var(--full-page-grid-central-column-width)) / 2) * -1);
+  --full-page-margin-inline-offset: calc(
+    ((100vw - var(--full-page-grid-central-column-width)) / 2) * -1
+  );
 
   width: 100%;
 
@@ -357,7 +392,7 @@ p:empty {
   /* Set up the grid */
   display: grid;
   grid-template-columns: var(--full-page-grid-with-margins);
-  min-height: var(--section-min-height, 'auto');
+  min-height: var(--section-min-height, "auto");
 }
 
 /* Place all direct children in the center column by default */
@@ -366,15 +401,18 @@ p:empty {
 }
 
 /* Make the actual section background transparent, and instead apply it to a separate sibling element to enable stacking with hero shadow  */
-.shopify-section:not(.header-section) :is(.section:is([class*='color-scheme-']), .cart__summary-container) {
+.shopify-section:not(.header-section)
+  :is(.section:is([class*="color-scheme-"]), .cart__summary-container) {
   background: transparent;
 }
 
-.shopify-section:not(.header-section):has(.section:is([class*='color-scheme-'])) {
+.shopify-section:not(.header-section):has(
+    .section:is([class*="color-scheme-"])
+  ) {
   position: relative;
 
   .section-background {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     z-index: var(--layer-section-background);
@@ -428,7 +466,9 @@ p:empty {
 }
 
 .section-content-wrapper.section-content-wrapper {
-  min-height: calc(var(--section-min-height, 'auto') - var(--section-height-offset, 0px));
+  min-height: calc(
+    var(--section-min-height, "auto") - var(--section-height-offset, 0px)
+  );
   position: relative;
   width: 100%;
   height: 100%;
@@ -511,8 +551,10 @@ p:empty {
   .grid {
     display: grid;
     gap: 0;
-    grid-template-columns: var(--margin-4xl) repeat(var(--centered-column-number), minmax(0, 1fr)) var(--margin-4xl);
-    grid-template-areas: 'column-0 column-1 column-2 column-3 column-4 column-5 column-6 column-7 column-8 column-9 column-10 column-11 column-12 column-13';
+    grid-template-columns:
+      var(--margin-4xl) repeat(var(--centered-column-number), minmax(0, 1fr))
+      var(--margin-4xl);
+    grid-template-areas: "column-0 column-1 column-2 column-3 column-4 column-5 column-6 column-7 column-8 column-9 column-10 column-11 column-12 column-13";
   }
 }
 
@@ -521,7 +563,13 @@ p:empty {
     grid-template-columns:
       1fr repeat(
         var(--centered-column-number),
-        minmax(0, calc((var(--page-width) - var(--page-margin) * 2) / var(--centered-column-number)))
+        minmax(
+          0,
+          calc(
+            (var(--page-width) - var(--page-margin) * 2) /
+              var(--centered-column-number)
+          )
+        )
       )
       1fr;
   }
@@ -676,17 +724,17 @@ placeholder-image {
   aspect-ratio: var(--ratio);
 }
 
-placeholder-image[data-type='product'] {
+placeholder-image[data-type="product"] {
   background-color: rgba(from var(--color-foreground) r g b / 15%);
   width: 100%;
 }
 
-placeholder-image[data-type='product'] > img {
+placeholder-image[data-type="product"] > img {
   mix-blend-mode: luminosity;
 }
 
 /** Placeholder background for the placeholder image, the dimensions are the same as the product images */
-placeholder-image[data-type='product']:not(:has(> img)) {
+placeholder-image[data-type="product"]:not(:has(> img)) {
   aspect-ratio: var(--ratio);
   height: 350px;
 }
@@ -812,8 +860,8 @@ a {
   text-decoration-color: transparent;
   text-decoration-thickness: 0.075em;
   text-underline-offset: 0.125em;
-  transition:
-    text-decoration-color var(--animation-speed) var(--animation-easing),
+  transition: text-decoration-color var(--animation-speed)
+      var(--animation-easing),
     color var(--animation-speed) var(--animation-easing);
 }
 
@@ -822,7 +870,8 @@ a {
 }
 
 /* Add underline to text using our paragraph styles only. */
-p:not(.h1, .h2, .h3, .h4, .h5, .h6) a:where(:not(.button, .button-primary, .button-secondary)),
+p:not(.h1, .h2, .h3, .h4, .h5, .h6)
+  a:where(:not(.button, .button-primary, .button-secondary)),
 .rte
   :is(p, ul, ol, table):not(.h1, .h2, .h3, .h4, .h5, .h6)
   a:where(:not(.button, .button-primary, .button-secondary)) {
@@ -897,7 +946,7 @@ summary::-webkit-details-marker {
     rgba(from var(--color-border) r g b / var(--product-card-border-opacity));
 }
 
-.product-grid--organic[product-grid-view='default'] .product-grid__item {
+.product-grid--organic[product-grid-view="default"] .product-grid__item {
   height: fit-content;
 }
 
@@ -913,11 +962,11 @@ summary::-webkit-details-marker {
   overflow: hidden;
 }
 
-[product-grid-view='zoom-out'] .product-grid__link {
+[product-grid-view="zoom-out"] .product-grid__link {
   row-gap: var(--padding-xs);
 }
 
-[product-grid-view='default'] {
+[product-grid-view="default"] {
   --product-grid-gap: 16px;
   --padding-block-start: 24px;
   --padding-block-end: 24px;
@@ -925,11 +974,11 @@ summary::-webkit-details-marker {
   --padding-inline-end: 0;
 }
 
-[product-grid-view='default'] .product-grid__item {
+[product-grid-view="default"] .product-grid__item {
   padding-block: 0;
 }
 
-[product-grid-view='mobile-single'],
+[product-grid-view="mobile-single"],
 .product-grid-mobile--large {
   @media screen and (width < 750px) {
     grid-template-columns: 1fr;
@@ -942,25 +991,30 @@ summary::-webkit-details-marker {
   }
 }
 
-ul[product-grid-view='zoom-out'] .product-grid__link > * {
+ul[product-grid-view="zoom-out"] .product-grid__link > * {
   display: none;
 }
 
-ul[product-grid-view='zoom-out'] .product-grid__link .card-gallery {
+ul[product-grid-view="zoom-out"] .product-grid__link .card-gallery {
   display: block;
 }
 
-[product-grid-view='zoom-out']
+[product-grid-view="zoom-out"]
   .card-gallery
-  > :is(quick-add-component, .product-badges, slideshow-component > slideshow-controls) {
+  > :is(
+    quick-add-component,
+    .product-badges,
+    slideshow-component > slideshow-controls
+  ) {
   display: none;
 }
 
-[product-grid-view='zoom-out'] :is(.card-gallery, .card-gallery .slideshow-control) {
+[product-grid-view="zoom-out"]
+  :is(.card-gallery, .card-gallery .slideshow-control) {
   pointer-events: none;
 }
 
-ul[product-grid-view='zoom-out'] .card-gallery > img {
+ul[product-grid-view="zoom-out"] .card-gallery > img {
   display: block;
 }
 
@@ -968,10 +1022,13 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
    Below is more complex solution but ensures all columns are the same width. Still need to figure out how to handle
    long product titles.
 */
-[product-grid-view='zoom-out'] {
+[product-grid-view="zoom-out"] {
   --product-grid-columns-desktop: repeat(
     10,
-    minmax(clamp(50px, calc(100% - 9 * var(--product-grid-gap)) / 10, 80px), 1fr)
+    minmax(
+      clamp(50px, calc(100% - 9 * var(--product-grid-gap)) / 10, 80px),
+      1fr
+    )
   );
 }
 
@@ -1046,8 +1103,7 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 
 results-list[initialized] {
   .product-grid__item {
-    transition:
-      opacity var(--animation-speed) var(--animation-easing),
+    transition: opacity var(--animation-speed) var(--animation-easing),
       transform var(--animation-speed) var(--animation-easing);
 
     @starting-style {
@@ -1139,16 +1195,19 @@ results-list[initialized] {
 }
 
 .dialog-modal[open] {
-  animation: elementSlideInTop var(--animation-speed) var(--animation-easing) forwards;
+  animation: elementSlideInTop var(--animation-speed) var(--animation-easing)
+    forwards;
 
   &::backdrop {
-    animation: backdropFilter var(--animation-speed) var(--animation-easing) forwards;
+    animation: backdropFilter var(--animation-speed) var(--animation-easing)
+      forwards;
     transition: opacity var(--animation-speed) var(--animation-easing);
   }
 }
 
 .dialog-modal.dialog-closing {
-  animation: elementSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+  animation: elementSlideOutTop var(--animation-speed) var(--animation-easing)
+    forwards;
 
   &::backdrop {
     opacity: 0;
@@ -1168,11 +1227,13 @@ results-list[initialized] {
 /* stylelint-enable value-keyword-case */
 
 .dialog-drawer[open] {
-  animation: var(--dialog-drawer-opening-animation) var(--animation-speed) var(--animation-easing) forwards;
+  animation: var(--dialog-drawer-opening-animation) var(--animation-speed)
+    var(--animation-easing) forwards;
 }
 
 .dialog-drawer.dialog-closing {
-  animation: var(--dialog-drawer-closing-animation) var(--animation-speed) var(--animation-easing);
+  animation: var(--dialog-drawer-closing-animation) var(--animation-speed)
+    var(--animation-easing);
 }
 
 /* Buttons */
@@ -1194,8 +1255,7 @@ button.shopify-payment-button__button--unbranded {
   font-size: var(--font-paragraph--size);
   line-height: var(--font-paragraph--line-height);
   margin-block: 0;
-  transition:
-    color var(--animation-speed) var(--animation-easing),
+  transition: color var(--animation-speed) var(--animation-easing),
     box-shadow var(--animation-speed) var(--animation-easing),
     background-color var(--animation-speed) var(--animation-easing);
   cursor: pointer;
@@ -1250,8 +1310,8 @@ input:not(:placeholder-shown)::placeholder {
   display: none;
 }
 
-.button[aria-disabled='true'],
-.button-secondary[aria-disabled='true'],
+.button[aria-disabled="true"],
+.button-secondary[aria-disabled="true"],
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1344,8 +1404,8 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   height: var(--icon-size-xs);
 }
 
-.show-more[data-expanded='true'] .show-more__label--more,
-.show-more[data-expanded='false'] .show-more__label--less {
+.show-more[data-expanded="true"] .show-more__label--more,
+.show-more[data-expanded="false"] .show-more__label--less {
   display: none;
 }
 
@@ -1356,13 +1416,17 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
 
 shopify-accelerated-checkout,
 shopify-accelerated-checkout-cart {
-  --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-primary);
+  --shopify-accelerated-checkout-button-border-radius: var(
+    --style-border-radius-buttons-primary
+  );
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 
 .product-form-buttons:has(.add-to-cart-button.button-secondary)
   :is(shopify-accelerated-checkout, shopify-accelerated-checkout-cart) {
-  --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary);
+  --shopify-accelerated-checkout-button-border-radius: var(
+    --style-border-radius-buttons-secondary
+  );
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 
@@ -1410,13 +1474,19 @@ summary .icon-plus :is(.horizontal, .vertical),
 
 details[open] > summary .icon-plus .horizontal,
 .details-open > summary .icon-plus .horizontal,
-.show-more:where([data-expanded='true']) .show-more__button .icon-plus .horizontal {
+.show-more:where([data-expanded="true"])
+  .show-more__button
+  .icon-plus
+  .horizontal {
   transform: rotate(90deg);
 }
 
 details[open] > summary .icon-plus .vertical,
 .details-open > summary .icon-plus .vertical,
-.show-more:where([data-expanded='true']) .show-more__button .icon-plus .vertical {
+.show-more:where([data-expanded="true"])
+  .show-more__button
+  .icon-plus
+  .vertical {
   transform: rotate(90deg);
   opacity: 0;
 }
@@ -1457,7 +1527,10 @@ media-gallery {
     /* arbitrary offset value based on average theme spacing and header height */
     --viewport-offset: 400px;
     --constrained-min-height: 300px;
-    --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
+    --constrained-height: max(
+      var(--constrained-min-height),
+      calc(100vh - var(--viewport-offset))
+    );
 
     margin-right: auto;
     margin-left: auto;
@@ -1569,12 +1642,14 @@ zoom-dialog dialog {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  animation: elementSlideInBottom var(--animation-speed) var(--animation-easing) forwards;
+  animation: elementSlideInBottom var(--animation-speed) var(--animation-easing)
+    forwards;
   animation-delay: calc(var(--animation-speed) * 2);
 }
 
 .dialog--closed .close-button {
-  animation: elementSlideOutBottom calc(var(--animation-speed) * 0.5) var(--animation-easing) forwards;
+  animation: elementSlideOutBottom calc(var(--animation-speed) * 0.5)
+    var(--animation-easing) forwards;
 }
 
 .dialog-thumbnails-list-container {
@@ -1596,12 +1671,14 @@ zoom-dialog dialog {
   padding: var(--padding-lg);
   margin-inline: auto;
   scrollbar-width: none;
-  animation: thumbnailsSlideInBottom calc(var(--animation-speed) * 0.75) var(--animation-easing) forwards;
+  animation: thumbnailsSlideInBottom calc(var(--animation-speed) * 0.75)
+    var(--animation-easing) forwards;
   animation-delay: calc(var(--animation-speed) * 1.5);
 }
 
 .dialog--closed .dialog-thumbnails-list {
-  animation: thumbnailsSlideOutBottom var(--animation-speed) var(--animation-easing) forwards;
+  animation: thumbnailsSlideOutBottom var(--animation-speed)
+    var(--animation-easing) forwards;
 }
 
 @media screen and (width >= 750px) {
@@ -1612,12 +1689,14 @@ zoom-dialog dialog {
     right: 0;
     max-height: calc(100vh - 200px);
     overflow-y: auto;
-    animation: thumbnailsSlideInTop calc(var(--animation-speed) * 0.5) var(--animation-easing) forwards;
+    animation: thumbnailsSlideInTop calc(var(--animation-speed) * 0.5)
+      var(--animation-easing) forwards;
     animation-delay: calc(var(--animation-speed) * 2);
   }
 
   .dialog--closed .dialog-thumbnails-list {
-    animation: thumbnailsSlideOutTop var(--animation-speed) var(--animation-easing) forwards;
+    animation: thumbnailsSlideOutTop var(--animation-speed)
+      var(--animation-easing) forwards;
   }
 }
 
@@ -1635,10 +1714,11 @@ zoom-dialog dialog {
     aspect-ratio: var(--aspect-ratio);
   }
 
-  &:is([aria-selected='true']) {
+  &:is([aria-selected="true"]) {
     outline: var(--focus-outline-width) solid currentcolor;
     outline-offset: calc(var(--focus-outline-offset) / 2);
-    border: var(--style-border-width) solid rgba(from var(--color-border) r g b / var(--media-border-opacity));
+    border: var(--style-border-width) solid
+      rgba(from var(--color-border) r g b / var(--media-border-opacity));
   }
 }
 
@@ -1693,19 +1773,27 @@ Otherwise, it should be a block to rely on its own size */
   padding: inherit;
 }
 
-slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+slideshow-slide
+  .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
   bottom: var(--padding-sm);
   right: var(--padding-sm);
 }
 
-.dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+.dialog-zoomed-gallery
+  .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
   /* Move the controls above the thumbnails. Need to calculate the height of the thumbnails list */
-  bottom: calc(var(--thumbnail-width) / calc(var(--media-preview-ratio)) + var(--padding-lg) * 2);
+  bottom: calc(
+    var(--thumbnail-width) / calc(var(--media-preview-ratio)) +
+      var(--padding-lg) * 2
+  );
   right: var(--padding-lg);
 }
 
 @media screen and (width < 750px) {
-  slideshow-component:has(:not(.mobile\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter))
+  slideshow-component:has(
+      :not(.mobile\:hidden)
+        :is(.slideshow-controls__dots, .slideshow-controls__counter)
+    )
     .shopify-model-viewer-ui__controls-area {
     /* Position the controls just above the counter */
     bottom: calc(var(--minimum-touch-target) + var(--padding-sm));
@@ -1713,13 +1801,17 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
 }
 
 @media screen and (width >= 750px) {
-  slideshow-component:has(:not(.desktop\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter))
+  slideshow-component:has(
+      :not(.desktop\:hidden)
+        :is(.slideshow-controls__dots, .slideshow-controls__counter)
+    )
     .shopify-model-viewer-ui__controls-area {
     /* Position the controls just above the counter */
     bottom: calc(var(--minimum-touch-target) + var(--padding-sm));
   }
 
-  .dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+  .dialog-zoomed-gallery
+    .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
     /* Move the controls up to match the padding on the thumbnails */
     bottom: var(--padding-lg);
 
@@ -1805,7 +1897,11 @@ deferred-media[data-media-loaded] img {
   }
 }
 
-deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__poster-button ~ video) {
+deferred-media[class]
+  :is(
+    .deferred-media__poster-button img,
+    .deferred-media__poster-button ~ video
+  ) {
   /* only apply this on the video block not product media */
   object-fit: cover;
   height: 100%;
@@ -1833,7 +1929,9 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 
 /* Swatches */
 .swatch {
-  --color-border: rgb(from var(--color-foreground) r g b / var(--style-border-swatch-opacity));
+  --color-border: rgb(
+    from var(--color-foreground) r g b / var(--style-border-swatch-opacity)
+  );
   --min-width-unitless: 15.9999; /* want to avoid division by 0 */
   --min-height-unitless: 15.9999; /* want to avoid division by 0 */
   --min-height: 16px;
@@ -1846,8 +1944,12 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   --max-filter-size: 32px;
 
   /* From the settings */
-  --offset-swatch-width: calc(var(--variant-picker-swatch-width-unitless) - var(--min-width-unitless));
-  --offset-swatch-height: calc(var(--variant-picker-swatch-height-unitless) - var(--min-height-unitless));
+  --offset-swatch-width: calc(
+    var(--variant-picker-swatch-width-unitless) - var(--min-width-unitless)
+  );
+  --offset-swatch-height: calc(
+    var(--variant-picker-swatch-height-unitless) - var(--min-height-unitless)
+  );
 
   /**
     Offset values are obtained from the following formulas:
@@ -1865,23 +1967,31 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     by some scaling factor.
   */
   --offset-scaled-width: calc(
-    var(--scaling-factor) * var(--offset-swatch-width) / var(--offset-swatch-height) * var(--offset-max-swatch-size)
+    var(--scaling-factor) * var(--offset-swatch-width) /
+      var(--offset-swatch-height) * var(--offset-max-swatch-size)
   );
   --offset-scaled-height: calc(
-    var(--scaling-factor) * var(--offset-swatch-height) / var(--offset-swatch-width) * var(--offset-max-swatch-size)
+    var(--scaling-factor) * var(--offset-swatch-height) /
+      var(--offset-swatch-width) * var(--offset-max-swatch-size)
   );
   --offset-max-swatch-size: calc(var(--max-swatch-size) - var(--min-width));
 
   /* width = min(m + sU, (m + s * W'/H' * M'), M) */
   --swatch-width: min(
-    calc(var(--min-width) + calc(var(--scaling-factor) * var(--offset-swatch-width) * 1px)),
+    calc(
+      var(--min-width) +
+        calc(var(--scaling-factor) * var(--offset-swatch-width) * 1px)
+    ),
     calc(var(--min-width) + var(--offset-scaled-width)),
     var(--max-swatch-size)
   );
 
   /* height = min(m + sV, (m + s * H'/W' * M'), M) */
   --swatch-height: min(
-    calc(var(--min-height) + calc(var(--scaling-factor) * var(--offset-swatch-height) * 1px)),
+    calc(
+      var(--min-height) +
+        calc(var(--scaling-factor) * var(--offset-swatch-height) * 1px)
+    ),
     calc(var(--min-height) + var(--offset-scaled-height)),
     var(--max-swatch-size)
   );
@@ -1890,7 +2000,8 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   background: var(--swatch-background);
   background-position: var(--swatch-focal-point, center);
   border-radius: var(--variant-picker-swatch-radius);
-  border: var(--style-border-swatch-width) var(--style-border-swatch-style) var(--color-border);
+  border: var(--style-border-swatch-width) var(--style-border-swatch-style)
+    var(--color-border);
   width: var(--swatch-width);
   height: var(--swatch-height);
 
@@ -1928,7 +2039,9 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   &.swatch--pill {
     --style-border-swatch-width: var(--variant-picker-border-width);
     --style-border-swatch-style: var(--variant-picker-border-style);
-    --color-border: rgb(from var(--color-foreground) r g b / var(--variant-picker-border-opacity));
+    --color-border: rgb(
+      from var(--color-foreground) r g b / var(--variant-picker-border-opacity)
+    );
   }
 
   @media screen and (width >= 750px) {
@@ -2011,7 +2124,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   transition: transform var(--animation-speed) var(--animation-easing);
 }
 
-.drawer[data-open='true'] {
+.drawer[data-open="true"] {
   transform: translateX(0);
 }
 
@@ -2050,7 +2163,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -2086,7 +2199,10 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 
 .spacing-style,
 .inherit-spacing {
-  padding-block: calc(var(--padding-block-start) + var(--section-top-offset, 0px)) var(--padding-block-end);
+  padding-block: calc(
+      var(--padding-block-start) + var(--section-top-offset, 0px)
+    )
+    var(--padding-block-end);
   padding-inline: var(--padding-inline-start) var(--padding-inline-end);
   margin-block: var(--margin-block-start) var(--margin-block-end);
   margin-inline: var(--margin-inline-start) var(--margin-inline-end);
@@ -2217,8 +2333,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   flex-grow: 1;
   text-align: left;
   border-radius: var(--style-border-radius-inputs);
-  transition:
-    box-shadow var(--animation-speed) ease,
+  transition: box-shadow var(--animation-speed) ease,
     background-color var(--animation-speed) ease;
   padding: var(--input-padding);
   box-shadow: var(--input-box-shadow);
@@ -2255,8 +2370,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition:
-    top var(--animation-speed) ease,
+  transition: top var(--animation-speed) ease,
     font-size var(--animation-speed) ease;
 }
 
@@ -2287,7 +2401,8 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     margin-inline: 1.5em 2.3em;
     margin-block: 3.8em;
     padding-inline-start: 0.8em;
-    border-inline-start: 1.5px solid rgb(from var(--color-foreground) r g b / 30%);
+    border-inline-start: 1.5px solid
+      rgb(from var(--color-foreground) r g b / 30%);
     font-style: italic;
     font-weight: 500;
   }
@@ -2418,7 +2533,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 }
 
 /* Add to cart button */
-.button[id^='BuyButtons-ProductSubmitButton-'] {
+.button[id^="BuyButtons-ProductSubmitButton-"] {
   position: relative;
   overflow: hidden;
 }
@@ -2475,7 +2590,8 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   }
 }
 
-.product-form-buttons:has(.add-to-cart-button.button-secondary) .quantity-selector {
+.product-form-buttons:has(.add-to-cart-button.button-secondary)
+  .quantity-selector {
   border-radius: var(--style-border-radius-buttons-secondary);
 }
 
@@ -2531,25 +2647,27 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
   transform: scale(0.9);
 }
 
-.quantity-selector input[type='number'] {
+.quantity-selector input[type="number"] {
   margin: 0;
   text-align: center;
   border: none;
   appearance: none;
-  max-width: calc(var(--quantity-selector-width) - var(--minimum-touch-target) * 2);
+  max-width: calc(
+    var(--quantity-selector-width) - var(--minimum-touch-target) * 2
+  );
   border-radius: var(--style-border-radius-buttons);
   color: var(--color-input-text);
   background-color: transparent;
 }
 
 /* Chrome, Safari, Edge, Opera */
-.quantity-selector input[type='number']::-webkit-inner-spin-button,
-.quantity-selector input[type='number']::-webkit-outer-spin-button {
+.quantity-selector input[type="number"]::-webkit-inner-spin-button,
+.quantity-selector input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
 }
 
 /* Firefox */
-.quantity-selector input[type='number'] {
+.quantity-selector input[type="number"] {
   appearance: textfield;
 }
 
@@ -2964,7 +3082,7 @@ fly-to-cart {
 }
 
 .top-shadow::before {
-  content: '';
+  content: "";
   box-shadow: 0 0 10px var(--color-shadow);
   position: absolute;
   z-index: var(--layer-lowest);
@@ -2979,7 +3097,7 @@ fly-to-cart {
 }
 
 .bottom-shadow::before {
-  content: '';
+  content: "";
   box-shadow: 0 0 10px var(--color-shadow);
   position: absolute;
   z-index: var(--layer-lowest);
@@ -3063,28 +3181,28 @@ slideshow-slides {
     border: none;
   }
 
-  &[size='small'] {
+  &[size="small"] {
     min-height: 17.5rem;
   }
 
-  &[size='medium'] {
+  &[size="medium"] {
     min-height: 21.25rem;
   }
 
-  &[size='large'] {
+  &[size="large"] {
     min-height: 25rem;
   }
 
   @media screen and (width >= 750px) {
-    &[size='small'] {
+    &[size="small"] {
       min-height: 26.25rem;
     }
 
-    &[size='medium'] {
+    &[size="medium"] {
       min-height: 35rem;
     }
 
-    &[size='large'] {
+    &[size="large"] {
       min-height: 45rem;
     }
   }
@@ -3103,7 +3221,7 @@ slideshow-slides {
   padding-block: 16px;
 }
 
-slideshow-component[disabled='true'] slideshow-slides {
+slideshow-component[disabled="true"] slideshow-slides {
   overflow: hidden;
 }
 
@@ -3124,11 +3242,11 @@ slideshow-slide {
   contain-intrinsic-size: auto none;
 
   slideshow-component[actioned] &,
-  &[aria-hidden='false'] {
+  &[aria-hidden="false"] {
     content-visibility: visible;
   }
 
-  slideshow-component slideshow-slide:not([aria-hidden='false']) {
+  slideshow-component slideshow-slide:not([aria-hidden="false"]) {
     content-visibility: hidden;
   }
 
@@ -3141,8 +3259,8 @@ slideshow-slide {
   /* Media gallery has a peeking slide on the right side always, and on the left side when the current slide is the last one */
   .media-gallery--hint
     :is(
-      slideshow-slide:has(+ slideshow-slide[aria-hidden='false']:last-of-type),
-      slideshow-slide[aria-hidden='false'] + slideshow-slide
+      slideshow-slide:has(+ slideshow-slide[aria-hidden="false"]:last-of-type),
+      slideshow-slide[aria-hidden="false"] + slideshow-slide
     ) {
     content-visibility: auto;
 
@@ -3159,8 +3277,8 @@ slideshow-slide {
  */
 :is(.collection-list__carousel, .resource-list__carousel, .card-gallery)
   :is(
-    slideshow-slide:has(+ slideshow-slide[aria-hidden='false']),
-    slideshow-slide[aria-hidden='false'] + slideshow-slide
+    slideshow-slide:has(+ slideshow-slide[aria-hidden="false"]),
+    slideshow-slide[aria-hidden="false"] + slideshow-slide
   ) {
   content-visibility: auto;
 
@@ -3173,16 +3291,19 @@ slideshow-slide {
  * Be specific about HTML children structure to avoid targeting nested slideshows.
  * Ensure that the content is 'visible' while scrolling instead of 'auto' to avoid issues in Safari.
  */
-slideshow-component:is([dragging], [transitioning], :hover) > slideshow-container > slideshow-slides > slideshow-slide {
+slideshow-component:is([dragging], [transitioning], :hover)
+  > slideshow-container
+  > slideshow-slides
+  > slideshow-slide {
   content-visibility: visible;
 }
 
-slideshow-slides[gutters*='start'] {
+slideshow-slides[gutters*="start"] {
   padding-inline-start: var(--gutter-slide-width, 0);
   scroll-padding-inline-start: var(--gutter-slide-width, 0);
 }
 
-slideshow-slides[gutters*='end'] {
+slideshow-slides[gutters*="end"] {
   padding-inline-end: var(--gutter-slide-width, 0);
 }
 
@@ -3243,42 +3364,49 @@ slideshow-controls .icon {
   height: var(--icon-size-xs);
 }
 
-slideshow-controls[pagination-position='center'] {
+slideshow-controls[pagination-position="center"] {
   align-items: center;
   justify-content: center;
 }
 
-slideshow-controls[pagination-position='center'][thumbnails] {
+slideshow-controls[pagination-position="center"][thumbnails] {
   width: 100%;
 }
 
-slideshow-controls[pagination-position='center']:not([controls-on-media], [thumbnails], [icons-on-media]) {
+slideshow-controls[pagination-position="center"]:not(
+    [controls-on-media],
+    [thumbnails],
+    [icons-on-media]
+  ) {
   justify-content: space-between;
 }
 
 slideshow-component:has(slideshow-controls[thumbnails]) {
-  &:has(slideshow-controls[pagination-position='right']) {
+  &:has(slideshow-controls[pagination-position="right"]) {
     display: grid;
     grid-template:
-      'container controls' auto
-      'arrows controls' min-content
+      "container controls" auto
+      "arrows controls" min-content
       / 1fr auto;
   }
 
-  &:has(slideshow-controls[pagination-position='left']) {
+  &:has(slideshow-controls[pagination-position="left"]) {
     display: grid;
     grid-template:
-      'controls container' auto
-      'controls arrows' min-content
+      "controls container" auto
+      "controls arrows" min-content
       / auto 1fr;
   }
 
-  slideshow-controls[pagination-position='left'] {
+  slideshow-controls[pagination-position="left"] {
     order: -1;
   }
 }
 
-slideshow-controls[thumbnails]:is([pagination-position='right'], [pagination-position='left']) {
+slideshow-controls[thumbnails]:is(
+    [pagination-position="right"],
+    [pagination-position="left"]
+  ) {
   display: flex;
   flex-direction: column;
   height: 0;
@@ -3301,30 +3429,39 @@ slideshow-controls[thumbnails]:is([pagination-position='right'], [pagination-pos
 }
 
 slideshow-controls:not([controls-on-media])[icons-on-media] {
-  &[pagination-position='right'] {
+  &[pagination-position="right"] {
     justify-content: flex-end;
   }
 
-  &[pagination-position='left'] {
+  &[pagination-position="left"] {
     justify-content: flex-start;
   }
 }
 
-slideshow-controls:not([controls-on-media]):is([pagination-position='left'], [pagination-position='right'])
+slideshow-controls:not([controls-on-media]):is(
+    [pagination-position="left"],
+    [pagination-position="right"]
+  )
   .slideshow-controls__thumbnails {
   padding-block: var(--padding-2xs);
 }
 
 slideshow-controls:not([controls-on-media]) {
-  &:is([pagination-position='right']) {
+  &:is([pagination-position="right"]) {
     .slideshow-controls__thumbnails {
-      padding-inline-end: var(--slideshow-thumbnails-padding-inline, var(--focus-outline-offset));
+      padding-inline-end: var(
+        --slideshow-thumbnails-padding-inline,
+        var(--focus-outline-offset)
+      );
     }
   }
 
-  &:is([pagination-position='left']) {
+  &:is([pagination-position="left"]) {
     .slideshow-controls__thumbnails {
-      padding-inline-start: var(--slideshow-thumbnails-padding-inline, var(--focus-outline-offset));
+      padding-inline-start: var(
+        --slideshow-thumbnails-padding-inline,
+        var(--focus-outline-offset)
+      );
     }
   }
 }
@@ -3336,30 +3473,33 @@ slideshow-controls[controls-on-media] {
     --color-foreground: #fff;
   }
 
-  &[pagination-position='right'] {
+  &[pagination-position="right"] {
     right: 0;
   }
 
-  &[pagination-position='left'] {
+  &[pagination-position="left"] {
     left: 0;
   }
 
-  &[pagination-position='center'] {
+  &[pagination-position="center"] {
     width: 100%;
   }
 
-  &:not([thumbnails])[pagination-position='left'] {
+  &:not([thumbnails])[pagination-position="left"] {
     width: fit-content;
     align-self: flex-start;
   }
 
-  &:not([thumbnails])[pagination-position='right'] {
+  &:not([thumbnails])[pagination-position="right"] {
     width: fit-content;
     align-self: flex-end;
   }
 }
 
-slideshow-controls:is([pagination-position='right'], [pagination-position='left']) {
+slideshow-controls:is(
+    [pagination-position="right"],
+    [pagination-position="left"]
+  ) {
   .slideshow-controls__thumbnails {
     flex-direction: column;
   }
@@ -3414,7 +3554,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
     border-radius: calc(var(--size));
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       background-color: var(--color);
       height: var(--size);
@@ -3424,7 +3564,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
       border-radius: calc(var(--size) / 2);
 
       @supports not (view-timeline-axis: inline) {
-        &[aria-selected='true'] {
+        &[aria-selected="true"] {
           --color: var(--color-active);
         }
       }
@@ -3434,7 +3574,7 @@ slideshow-controls:has(.slideshow-controls__dots) {
       }
     }
 
-    &[aria-selected='true'] {
+    &[aria-selected="true"] {
       --color: var(--color-active);
     }
   }
@@ -3535,10 +3675,11 @@ slideshow-controls:has(.slideshow-controls__dots) {
       border-radius: var(--media-radius);
     }
 
-    &:is([aria-selected='true']) {
+    &:is([aria-selected="true"]) {
       outline: var(--focus-outline-width) solid currentcolor;
       outline-offset: calc(var(--focus-outline-offset) / 2);
-      border: var(--style-border-width) solid rgba(from var(--color-border) r g b / var(--media-border-opacity));
+      border: var(--style-border-width) solid
+        rgba(from var(--color-border) r g b / var(--media-border-opacity));
     }
   }
 }
@@ -3585,27 +3726,27 @@ slideshow-arrows {
   mix-blend-mode: unset;
   align-items: flex-end;
 
-  &[position='left'] {
+  &[position="left"] {
     justify-content: flex-start;
     padding-inline: var(--padding-xs);
   }
 
-  &[position='right'] {
+  &[position="right"] {
     justify-content: flex-end;
     padding-inline: var(--padding-xs);
   }
 
-  &[position='center'] {
+  &[position="center"] {
     justify-content: space-between;
     align-items: center;
   }
 
-  &[shape='none'] {
+  &[shape="none"] {
     mix-blend-mode: difference;
   }
 }
 
-slideshow-component[disabled='true'] slideshow-arrows {
+slideshow-component[disabled="true"] slideshow-arrows {
   display: none;
 }
 
@@ -3642,11 +3783,14 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 }
 
 :not(.media-gallery--carousel)
-  > :is(slideshow-component:hover, slideshow-component:focus-within):not(:has(slideshow-controls:hover))
+  > :is(slideshow-component:hover, slideshow-component:focus-within):not(
+    :has(slideshow-controls:hover)
+  )
   > slideshow-container
   > slideshow-arrows
   .slideshow-control {
-  animation: arrowsSlideIn var(--animation-speed) var(--animation-easing) forwards;
+  animation: arrowsSlideIn var(--animation-speed) var(--animation-easing)
+    forwards;
 }
 
 @keyframes arrowsSlideIn {
@@ -3677,7 +3821,8 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 }
 
 /* Container styles */
-.section-content-wrapper.section-content-wrapper:where(.layout-panel-flex) .group-block--fill {
+.section-content-wrapper.section-content-wrapper:where(.layout-panel-flex)
+  .group-block--fill {
   flex: 1;
 }
 
@@ -3749,8 +3894,7 @@ accordion-custom {
       overflow-y: clip;
       opacity: 0;
       interpolate-size: allow-keywords;
-      transition:
-        content-visibility var(--animation-speed-slow) allow-discrete,
+      transition: content-visibility var(--animation-speed-slow) allow-discrete,
         padding-block var(--animation-speed-slow) var(--animation-easing),
         opacity var(--animation-speed-slow) var(--animation-easing),
         block-size var(--animation-speed-slow) var(--animation-easing);
@@ -3783,13 +3927,13 @@ accordion-custom {
   }
 }
 
-accordion-custom[data-disable-on-mobile='true'] summary {
+accordion-custom[data-disable-on-mobile="true"] summary {
   @media screen and (width < 750px) {
     cursor: auto;
   }
 }
 
-accordion-custom[data-disable-on-desktop='true'] summary {
+accordion-custom[data-disable-on-desktop="true"] summary {
   @media screen and (width >= 750px) {
     cursor: auto;
   }
@@ -3851,11 +3995,13 @@ text-component {
 }
 
 .transition-transform {
-  transition: transform var(--animation-speed-medium) var(--animation-timing-bounce);
+  transition: transform var(--animation-speed-medium)
+    var(--animation-timing-bounce);
 }
 
 .transition-border-color {
-  transition: border-color var(--animation-speed-medium) var(--animation-timing-hover);
+  transition: border-color var(--animation-speed-medium)
+    var(--animation-timing-hover);
 }
 
 /* Global scrollbar styles */
@@ -3888,7 +4034,9 @@ text-component {
 }
 
 /* Product card title truncation - applied only to zoom-out view */
-[product-grid-view='zoom-out'] :is(.product-card, .product-grid__link) :is(h4, .h4) {
+[product-grid-view="zoom-out"]
+  :is(.product-card, .product-grid__link)
+  :is(h4, .h4) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -3920,8 +4068,8 @@ text-component {
 .predictive-search-results__card:hover {
   position: relative;
   z-index: var(--layer-raised);
-  transition:
-    transform var(--hover-transition-duration) var(--hover-transition-timing),
+  transition: transform var(--hover-transition-duration)
+      var(--hover-transition-timing),
     box-shadow var(--hover-transition-duration) var(--hover-transition-timing);
 }
 
@@ -3936,48 +4084,86 @@ text-component {
   box-shadow: none;
 }
 
-.item-1{
-  font-weight:600;
-  color:rgb(255, 74, 74);
+.item-1 {
+  font-weight: 600;
+  color: rgb(255, 74, 74);
 }
 
-.menu-list__link-title.megamenu{
-  display:flex;
-  align-items:center;
-  gap:8px;
+.menu-list__link-title.megamenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.announcement-bar__slider slideshow-arrows{
+.announcement-bar__slider slideshow-arrows {
   display: none;
 }
 
-.price__prod{
-  display:flex;
+.price__prod {
+  display: flex;
   flex-direction: column;
 }
 
-.price__prod .installment-price{
-  font-size:12px;
+.price__prod .installment-price {
+  font-size: 12px;
 }
 
-.discount__coupon{
+.discount__coupon {
   max-width: 180px;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 5px;
-  font-size:10px !important;
+  font-size: 10px !important;
   color: rgb(88, 88, 88);
   background-color: rgb(from var(--color-foreground) r g b / 5%);
 }
 
-.discount__coupon svg{
-  width:20px;
-  margin:2px 0 0 0;
+.discount__coupon svg {
+  width: 20px;
+  margin: 2px 0 0 0;
   fill: rgb(88, 88, 88);
   transform: rotate(-20deg);
 }
 
-.g2digital{
-  width:70px;
+.g2digital {
+  width: 70px;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-flutuante {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 12px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.whatsapp-flutuante svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+.whatsapp-flutuante--right {
+  right: 20px;
+  left: auto;
+}
+
+.whatsapp-flutuante--left {
+  left: 20px;
+  right: auto;
 }
