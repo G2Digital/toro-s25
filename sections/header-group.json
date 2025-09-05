@@ -145,10 +145,20 @@
         "enable_transparent_header_collection": false,
         "collection_color_scheme": "default"
       }
+    },
+    "whatsapp_flutuante_LNkR9X": {
+      "type": "whatsapp-flutuante",
+      "name": "Botão WhatsApp Flutuante",
+      "settings": {
+        "show_whatsapp_button": true,
+        "whatsapp_link": "https://api.whatsapp.com/send?phone=554888183559&text=Ol%C3%A1%2C%20Gostaria%20de%20atendimento",
+        "position": "right"
+      }
     }
   },
   "order": [
     "header_announcements_NGPpb8",
-    "header_section"
+    "header_section",
+    "whatsapp_flutuante_LNkR9X"
   ]
 }
