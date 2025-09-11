@@ -597,7 +597,7 @@
             "text_xC4pGY": {
               "type": "text",
               "settings": {
-                "text": "<p>Uma marca<strong>100% nacional</strong>, com<strong>10 anos</strong>de tradição e reconhecimento no mercado. Oferecemos uma coleção completa de moda masculina e infantil que abrange beachwear, streetwear e casual urbano, além de uma linha diversificada de acessórios como óculos, relógios, bonés e calçados.</p>",
+                "text": "<p>Uma marca <strong>100% nacional</strong>, com<strong>10 anos</strong>de tradição e reconhecimento no mercado. Oferecemos uma coleção completa de moda masculina e infantil que abrange beachwear, streetwear e casual urbano, além de uma linha diversificada de acessórios como óculos, relógios, bonés e calçados.</p>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
@@ -671,7 +671,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
-        "padding-block-end": 50
+        "padding-block-end": 100
       }
     },
     "section_FYCLjA": {
