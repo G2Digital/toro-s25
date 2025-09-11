@@ -11,42 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "blocks": {
-        "heading": {
-          "type": "text",
-          "name": "Title",
-          "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "type_preset": "h1",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "color": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "background": false,
-            "background_color": "#00000026",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "page-content": {
-          "type": "page-content",
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "heading",
-        "page-content"
-      ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -54,9 +19,126 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "section_83HiG8": {
+      "type": "section",
+      "blocks": {
+        "text_hqP8Td": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>TORO CLOTHING é uma marca 100% nacional, com 10 anos de tradição e reconhecimento no mercado. Oferecemos uma coleção completa de moda masculina e infantil que abrange beachwear, streetwear e casual urbano, além de uma linha diversificada de acessórios como óculos, relógios, bonés e calçados.<br/></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_c4ULBP": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>QUEM SOMOS</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 10,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_rtRL9L": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Uma história que começou com um sonho. Desde cedo, tive a oportunidade de viver experiências fora do Brasil, entre Estados Unidos e Espanha. Esse contato com diferentes culturas, aliado ao incentivo dos meus pais, me despertou um olhar apurado para arte, moda e estilo de vida.<br/><br/>Sempre gostei de me expressar através da forma de me vestir, e as pessoas ao meu redor elogiavam essa autenticidade. Minha esposa e um grande amigo do meio da moda foram peças fundamentais nesse processo eles me incentivaram a transformar a paixão em realidade.<br/><br/><strong>Até que, em 2015, criei a TORO.<br/><br/><br/></strong>O começo de uma revolução no beachwear. A ideia inicial era ambiciosa: estar entre as 10 maiores marcas de beachwear masculino do mundo. Começamos com uma proposta ousada para a época: shorts de praia mais curtos do que os habituais. O resultado foi imediato — uma explosão de vendas e pedidos.<br/>Atendia clientes no meu próprio apartamento e, em pouco tempo, abri um showroom com hora marcada. Minha esposa, que também tinha sua marca de beachwear feminino, dividia esse espaço comigo. Logo conquistamos nossa primeira loja de rua.<br/><br/><strong>Dez anos de Toro<br/></strong><br/>Hoje, a Toro completa 10 anos de história. De um apartamento em Florianópolis, chegamos a diferentes partes do mundo. Nossos produtos já foram vendidos em países como Portugal, Espanha e Emirados Árabes, inclusive no icônico Burj Al Arab, em Dubai. Também vestimos inúmeras celebridades brasileiras e até músicos internacionais.<br/><strong><br/>Muito além do beachwear<br/></strong><br/>Com o tempo, percebemos que a força do nosso logotipo e da nossa visão pedia mais do que apenas shorts. Criamos um mix completo de produtos: de chaveiros a jaquetas customizadas à mão por mim, passando por peças exclusivas e de tiragem limitada, garantindo autenticidade e exclusividade a cada cliente.<br/>Hoje, a Toro transita entre o beachwear, o streetwear e uma linha premium minimalista, sempre com tecidos nobres, design contemporâneo e um brand que desperta desejo.<br/><br/><strong>Qualidade, inovação e estilo de vida<br/></strong><br/>As coleções da Toro são reconhecidas pelo caimento perfeito, design diferenciado e materiais de altíssima qualidade. Estamos sempre atentos às mudanças de comportamento e às novas ferramentas tecnológicas, aliando alta tecnologia a tecidos e malhas premium para lançar moda com originalidade.<br/>Cada peça combina praticidade, tendências, qualidade, excelente acabamento e conforto, sempre com a nossa essência criativa e olhar global.<br/><br/></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_hqP8Td",
+        "text_c4ULBP",
+        "text_rtRL9L"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 50,
+        "padding-block-end": 50
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "section_83HiG8"
   ]
 }
