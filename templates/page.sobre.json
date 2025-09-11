@@ -204,6 +204,110 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_REHAMm": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Visão</h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 10,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_BRWHBW": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Fortalecer a Toro como uma marca de comunidade e identidade, feita para quem valoriza exclusividade, caimento perfeito e a verdadeira essência do vestir.<br/></p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_9H8LUt": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Valores<br/></h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 10,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_CDw4GM": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p><strong>Autenticidade: </strong>criar peças únicas que traduzam personalidade.<br/><strong>Exclusividade: </strong>tiragens limitadas e design original para quem valoriza o diferencial.<br/><strong>Qualidade: </strong>materiais nobres, excelente acabamento e caimento impecável.<br/><strong>Inovação: </strong>uso de tecnologia, pesquisa de tendências e criatividade para lançar moda.<br/><strong>Paixão pela arte:</strong> moda como expressão cultural, conectando estilo, atitude e emoção.<br/><strong>Orgulho das raízes:</strong> inspirados pela nossa história em Florianópolis, mas com visão contemporânea.<br/><strong>Consciência: </strong>atenção às mudanças de comportamento e ao impacto positivo da moda.<br/></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -213,7 +317,11 @@
         "text_pMgQCA",
         "text_6cJjyb",
         "text_biUabt",
-        "text_Pmyakf"
+        "text_Pmyakf",
+        "text_REHAMm",
+        "text_BRWHBW",
+        "text_9H8LUt",
+        "text_CDw4GM"
       ],
       "name": "t:names.custom_section",
       "settings": {
