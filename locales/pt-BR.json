@@ -319,6 +319,10 @@
       "general": {
         "cart": "Carrrinho",
         "back_to_cart": "Voltar para o carrinho"
+      },
+      "contact": {
+        "phone_label": "Telefone / WhatsApp",
+        "phone_placeholder": "Telefone / WhatsApp"
       }
     }
   }
