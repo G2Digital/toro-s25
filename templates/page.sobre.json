@@ -46,25 +46,22 @@
             "gap": 0
           },
           "blocks": {
-            "text_hUC3c8": {
-              "type": "text",
-              "name": "t:names.caption",
+            "image_HL7LrF": {
+              "type": "image",
+              "name": "t:names.image",
               "settings": {
-                "text": "<p><strong>TORO CLOTHING</strong></p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h6",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
+                "image": "shopify://shop_images/logotipo-toro-checkout-wr_c2a9ad57-7fc0-4830-920b-b2f69c17940b.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "custom",
+                "custom_width": 40,
+                "width_mobile": "custom",
+                "custom_width_mobile": 30,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -184,7 +181,7 @@
             }
           },
           "block_order": [
-            "text_hUC3c8",
+            "image_HL7LrF",
             "group_KrJYGW",
             "button_kX3hNr"
           ]
