@@ -53,7 +53,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>QUEM SOMOS</h2>",
+            "text": "<h3>QUEM SOMOS</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
