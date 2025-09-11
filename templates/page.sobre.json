@@ -53,7 +53,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>QUEM SOMOS</h3>",
+            "text": "<h3>Quem somos</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -100,12 +100,120 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_pMgQCA": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Nossa essência<br/></h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 10,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_6cJjyb": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>A Toro é mais do que roupa. É estilo de vida, é expressão, é exclusividade. Somos arte, moda e atitude traduzidas em peças únicas, criadas com paixão e visão global — mas sempre com orgulho das nossas raízes em Florianópolis.<br/></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_biUabt": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Missão, Visão e Valores<br/></h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 10,
+            "padding-block-end": 10,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_Pmyakf": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Criar roupas que unem arte, moda e estilo de vida, com design diferenciado, caimento perfeito e materiais de altíssima qualidade. Nosso propósito é oferecer peças exclusivas que expressem autenticidade, combinando inovação tecnológica, criatividade e conforto sempre com um olhar global, mas mantendo nossas raízes em Florianópolis.</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_hqP8Td",
         "text_c4ULBP",
-        "text_rtRL9L"
+        "text_rtRL9L",
+        "text_pMgQCA",
+        "text_6cJjyb",
+        "text_biUabt",
+        "text_Pmyakf"
       ],
       "name": "t:names.custom_section",
       "settings": {
