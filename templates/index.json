@@ -76,7 +76,6 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/2.png",
-            "image_1_mobile": "shopify://shop_images/CHINELOS_E_BONES_BANNER_MOBILE.png",
             "link_slide": "shopify://collections/bones-1",
             "content_direction": "column",
             "vertical_on_mobile": true,
