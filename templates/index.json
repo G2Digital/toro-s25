@@ -12,6 +12,35 @@
     "slideshow_8Bh6EU": {
       "type": "slideshow",
       "blocks": {
+        "slide_YMrbwa": {
+          "type": "_slide",
+          "name": "t:names.slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/banner_site_lancamentos.png",
+            "image_1_mobile": "shopify://shop_images/banner_mobile_shorts.png",
+            "link_slide": "shopify://collections/shorts-praia",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "slide_pGfbwQ": {
           "type": "_slide",
           "name": "t:names.slide",
@@ -159,6 +188,7 @@
         }
       },
       "block_order": [
+        "slide_YMrbwa",
         "slide_pGfbwQ",
         "slide_F8TbRA",
         "slide_pWqTda",
@@ -798,7 +828,25 @@
         "google_reviews_google_carousel_one_4cKaLw": {
           "type": "shopify://apps/google-reviews/blocks/google-carousel-one/4eeaae1c-902b-481c-bec5-3f32291a58d5",
           "settings": {
-            "rank": "1"
+            "rank": "1",
+            "photo_size": "large",
+            "auto_scroll": true,
+            "auto_scroll_interval": 3,
+            "rating": true,
+            "submit_review_button": true,
+            "business_info": true,
+            "review_photo": true,
+            "review_card_shadow": false,
+            "corner_radius": 20,
+            "star_color": "#f6ab00",
+            "review_card_background": "#f3f6f9",
+            "content_color": "#000000",
+            "name_color": "#000000",
+            "date_color": "#7a7a7a",
+            "more_color": "#1a73e8",
+            "submit_button_background_color": "#0084ff",
+            "submit_button_text": "#ffffff",
+            "business_info_color": "#000000"
           }
         }
       },
