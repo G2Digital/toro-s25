@@ -19,7 +19,7 @@
             "media_type_1": "image",
             "image_1": "shopify://shop_images/baner_site.png",
             "image_1_mobile": "shopify://shop_images/banner_mobile_871a3b2b-9949-4464-a290-2166c02ac9e6.png",
-            "link_slide": "shopify://collections/89",
+            "link_slide": "shopify://collections/outlet",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
