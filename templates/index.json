@@ -75,6 +75,7 @@
         "slide_pGfbwQ": {
           "type": "_slide",
           "name": "t:names.slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/1.png",
@@ -104,6 +105,7 @@
         "slide_F8TbRA": {
           "type": "_slide",
           "name": "t:names.slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/2.png",
@@ -162,6 +164,7 @@
         "slide_WYBN4H": {
           "type": "_slide",
           "name": "t:names.slide",
+          "disabled": true,
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/banner_site_camisetas.png",
