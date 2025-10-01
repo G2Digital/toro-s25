@@ -12,36 +12,6 @@
     "slideshow_8Bh6EU": {
       "type": "slideshow",
       "blocks": {
-        "slide_C3epcR": {
-          "type": "_slide",
-          "name": "t:names.slide",
-          "disabled": true,
-          "settings": {
-            "media_type_1": "image",
-            "image_1": "shopify://shop_images/baner_site.png",
-            "image_1_mobile": "shopify://shop_images/banner_mobile_871a3b2b-9949-4464-a290-2166c02ac9e6.png",
-            "link_slide": "shopify://collections/outlet",
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "slide_YMrbwa": {
           "type": "_slide",
           "name": "t:names.slide",
@@ -189,6 +159,35 @@
           },
           "blocks": {}
         },
+        "slide_C3epcR": {
+          "type": "_slide",
+          "name": "t:names.slide",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/banner_dia_13_jun.png",
+            "image_1_mobile": "shopify://shop_images/banner_dia_13_jun_mobile.png",
+            "link_slide": "shopify://collections/outlet",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "slide_JgwpYM": {
           "type": "_slide",
           "name": "t:names.slide",
@@ -220,12 +219,12 @@
         }
       },
       "block_order": [
-        "slide_C3epcR",
         "slide_YMrbwa",
         "slide_pGfbwQ",
         "slide_F8TbRA",
         "slide_pWqTda",
         "slide_WYBN4H",
+        "slide_C3epcR",
         "slide_JgwpYM"
       ],
       "settings": {
