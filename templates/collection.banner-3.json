@@ -54,7 +54,7 @@
         "section_width": "full-width",
         "slide_height": "custom_height",
         "custom_height_desktop": 350,
-        "custom_height_mobile": 100,
+        "custom_height_mobile": 200,
         "padding-block-start": 0,
         "padding-block-end": 0
       }
