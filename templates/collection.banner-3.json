@@ -16,8 +16,8 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/banner_nova_colecao.png",
-            "image_1_mobile": "shopify://shop_images/banner_mobile_new_collection.png",
+            "image_1": "shopify://shop_images/Shorts.png",
+            "image_1_mobile": "shopify://shop_images/Shorts_Mobile.png",
             "link_slide": "",
             "content_direction": "column",
             "vertical_on_mobile": true,
