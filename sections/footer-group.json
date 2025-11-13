@@ -503,6 +503,9 @@
         "group_qaqBdE",
         "footer_utilities_KRaGcH"
       ],
+      "custom_css": [
+        "a {text-decoration: none;}"
+      ],
       "name": "Footer",
       "settings": {
         "content_direction": "column",
