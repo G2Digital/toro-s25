@@ -294,7 +294,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Rua Santos Saraiva 494, Sala 01<br/>Estreito, Florianópolis - SC<br/>Fone: (48) 98818-3559<br/><br/><a href=\"https://wa.me/5548988183559\" target=\"_blank\" title=\"https://wa.me/5548988183559\">+55 48 98818-3559 (Varejo)</a></p><p>+55 48 99957-8126 (Atacado)</p>",
+                    "text": "<p>Rua Santos Saraiva 494, Sala 01<br/>Estreito, Florianópolis - SC<br/>Fone: (48) 98818-3559<br/><br/><a href=\"https://wa.me/5548988183559\" target=\"_blank\" title=\"https://wa.me/5548988183559\">+55 48 98818-3559 (Varejo)</a></p><p><a href=\"https://wa.me/5548999578126\" target=\"_blank\" title=\"https://wa.me/5548999578126\">+55 48 99957-8126 (Atacado)</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
