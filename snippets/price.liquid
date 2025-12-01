@@ -34,6 +34,11 @@
     assign price = price | money
     assign compare_at_price = compare_at_price | money
   endif
+
+  # Calcula o preço com 5% de desconto para PIX
+  assign pix_discount = 0.05
+  assign pix_price_cents = selected_variant.price | times: 100 | minus: pix_discount | divided_by: 100
+  assign pix_price = selected_variant.price | times: 0.95
 -%}
 
 <div class="price__prod" ref="priceContainer">
@@ -47,10 +52,33 @@
     <s class="compare-at-price">{{ compare_at_price }}</s>
   {% endif %}
 
-  {%- assign installments = 6 -%}
-  {%- assign installment_price = selected_variant.price | divided_by: installments -%}
-  <span class="installment-price">
-    {{ installments }}x {{ installment_price | money }}
+  {%- comment -%}
+    Calcula parcelamento com valor mínimo de R$ 100,00 por parcela
+    Valor mínimo em centavos: 10000 (R$ 100,00)
+  {%- endcomment -%}
+  {%- assign min_installment_value = 10000 -%}
+  {%- assign max_installments = 6 -%}
+  {%- assign installments = max_installments -%}
+  
+  {%- comment -%} Calcula o número máximo de parcelas respeitando o mínimo {%- endcomment -%}
+  {%- for i in (1..max_installments) -%}
+    {%- assign test_installment = selected_variant.price | divided_by: i -%}
+    {%- if test_installment >= min_installment_value -%}
+      {%- assign installments = i -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%} Se o valor total for menor que o mínimo, mostra apenas à vista {%- endcomment -%}
+  {%- if selected_variant.price >= min_installment_value -%}
+    {%- assign installment_price = selected_variant.price | divided_by: installments -%}
+    <span class="installment-price">
+      {{ installments }}x de {{ installment_price | money }} s/ juros
+    </span>
+  {%- endif -%}
+
+  {%- comment -%} Exibe o preço com desconto no PIX {%- endcomment -%}
+  <span class="pix-price">
+    {{ pix_price | money }} <small>(5% de desconto no PIX)</small>
   </span>
 
   {%- if selected_variant.unit_price and show_unit_price %}
@@ -66,4 +94,3 @@
     {% render 'unit-price', variant: selected_variant, price: unit_price %}
   {%- endif -%}
 </div>
-
