@@ -18,8 +18,8 @@
           "disabled": true,
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/BLACK_NOVEMBER_BANNER_DESK.png",
-            "image_1_mobile": "shopify://shop_images/BLACK_NOVEMBER_MOBILE.png",
+            "image_1": "shopify://shop_images/desktop_banner_99_reais.png",
+            "image_1_mobile": "shopify://shop_images/mobine_banner_99_horas.png",
             "link_slide": "shopify://collections/outlet",
             "content_direction": "column",
             "vertical_on_mobile": true,
